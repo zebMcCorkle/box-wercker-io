@@ -1,0 +1,33 @@
+name: tablelist-io
+version: 1.0.0
+inherits: wercker/ubuntu12.04-webessentials@1.0.4
+type: main
+platform: ubuntu@14.04
+packages:
+  - iojs@1.5.1
+description: |
+  Wercker box with Ubuntu 14.04 and io.js 1.5.1
+keywords:
+  - io
+  - io.js
+  - ubuntu
+  - 14.04
+  - ubuntu 14.04
+  - wercker
+  - webessentials
+script: |
+  export IOVERSION=1.5.1
+  sudo apt-get update
+  sudo apt-get install wget build-essential
+  cd $HOME
+  mkdir iojsinstall
+  cd iojsinstall
+  wget http://iojs.org/dist/v$IOVERSION/iojs-v$IOVERSION.tar.gz
+  tar xzf iojs-v$IOVERSION.tar.gz
+  cd iojs-v$IOVERSION
+  ./configure
+  make
+  sudo make install
+  cd $HOME
+  rm -fr iojsinstall
+  iojs -v
