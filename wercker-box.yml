@@ -20,8 +20,6 @@ script: |
   sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
   sudo apt-get update
   sudo apt-get install wget build-essential
-  sudo update-alternatives --remove-all gcc 
-  sudo update-alternatives --remove-all g++
   sudo apt-get install gcc-4.8
   sudo apt-get install g++-4.8
   sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
