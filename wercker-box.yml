@@ -1,5 +1,5 @@
 name: tablelist-io
-version: 1.0.0
+version: 1.0.1
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: main
 platform: ubuntu@14.04
@@ -9,7 +9,11 @@ description: |
   Wercker box with Ubuntu 14.04 and io.js 1.5.1
 keywords:
   - io
+  - iojs
   - io.js
+  - node
+  - nodejs
+  - node.js
   - ubuntu
   - 14.04
   - ubuntu 14.04
