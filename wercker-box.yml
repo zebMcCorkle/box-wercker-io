@@ -17,7 +17,7 @@ keywords:
   - webessentials
 script: |
   export IOVERSION=1.5.1
-  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+  sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
   sudo apt-get update
   sudo apt-get install wget build-essential
   sudo apt-get install g++-4.9
