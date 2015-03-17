@@ -1,13 +1,12 @@
 name: tablelist-io
-version: 1.1.0
+version: 2.0.0
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: main
 platform: ubuntu@14.04
 packages:
   - iojs@1.5.1
-  - mongodb@3.0.0
 description: |
-  Wercker box with io.js 1.5.1 and MongoDB 3.0.0 running on Ubuntu 14.04 
+  Wercker box with io.js 1.5.1 running on Ubuntu 14.04 
 keywords:
   - io
   - iojs
@@ -15,9 +14,6 @@ keywords:
   - node
   - nodejs
   - node.js
-  - mongo
-  - mongodb
-  - mongodb 3.0.0
   - ubuntu
   - 14.04
   - ubuntu 14.04
@@ -35,12 +31,6 @@ script: |
   sudo apt-get update
   sudo apt-get upgrade -y
   sudo apt-get dist-upgrade
-
-  #### MongoDB
-  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-  echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
-  sudo apt-get update
-  sudo apt-get install -y mongodb-org
 
   #### io.js
   export IOVERSION=1.5.1
